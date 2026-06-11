@@ -259,17 +259,20 @@
             </div>
         </section>
 
-        <section id="login" class="login-section">
+ <section id="login" class="login-section">
     <div class="login-box">
         <span class="meta-label">MEMBER ACCESS</span>
-        <h2>SIGN IN</h2>
+        
+        <h2 id="auth-title">SIGN IN</h2>
+        
         <form id="login-form">
             <input type="email" id="login-email" placeholder="EMAIL ADDRESS" required>
-            <input type="password" id="login-password" placeholder="PASSWORD" required>
-            <button type="submit" class="submit-btn">ENTER SYSTEM</button>
+            <input type="password" id="login-password" placeholder="PASSWORD" required>  
+            <input type="password" id="register-confirm-password" placeholder="CONFIRM PASSWORD" class="auth-register-only" style="display: none;">
+            <button type="submit" class="submit-btn" id="auth-submit-btn">ENTER SYSTEM</button>
         </form>
-        <div class="create-account">
-            Don't have an account? <a href="#home" target="_blank">Create One</a>
+        <div class="create-account" id="auth-toggle-wrapper">
+            Don't have an account? <a href="#" id="go-to-register">Create One</a>
         </div>
     </div>
 </section>
