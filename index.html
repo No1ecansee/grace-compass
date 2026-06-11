@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace | Deep Web Compass</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+  
+<body>
+
+    <div class="css-preloader">
+        <div class="preloader-content">
+            <span class="preloader-title">GRACE</span>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+            <span class="preloader-status">CONNECTING TO NODE...</span>
+        </div> 
+    </div>
+
+    <div id="dynamic-bg" class="abyss-bg" data-bg="default"></div>
+
+    <nav>
+        <a href="#home" class="logo">GRACE</a>
+        <div class="nav-right">
+            <a href="#login" class="nav-login-link">LOGIN</a>
+            
+            <div class="burger-menu">
+                <div class="burger-lines">
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <div class="nav-hover-drawer">
+                    <span class="drawer-header">QUICK NAVIGATION</span>
+                    <div class="drawer-links">
+                        <a href="#categories" onclick="jumpToCategory(0)">Cinema & Streaming</a>
+                        <a href="#categories" onclick="jumpToCategory(1)">The Gaming Hub</a>
+                        <a href="#categories" onclick="jumpToCategory(2)">Audio & Soundtracks</a>
+                        <a href="#categories" onclick="jumpToCategory(3)">Manhwa & Novels</a>
+                        <a href="#categories" onclick="jumpToCategory(4)">Tech & Beyond</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-container">
+
+        <section id="home" class="hero-section">
+            <span class="vertical-track">EXPLORE // 2026</span>
+            <div class="hero-content">
+                <span class="subtitle-italic">discover your digital world</span>
+                <h1 class="main-title">GET IT WITH <br><span>GRACE</span></h1>
+                <p class="hero-summary">Skip the endless searching and find the web's best entertainment platforms all in one place with Grace.</p>
+                <a href="#categories" class="scroll-indicator">SCROLL DOWN &darr;</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2 class="editorial-header">About Us</h2>
+            <div class="editorial-body">
+                <h3>Welcome to Grace – Your Ultimate Entertainment Compass!</h3>
+                <p>Ever spent more time scrolling through streaming platforms trying to find where a movie is playing than actually watching it? Or wasted hours searching for a safe, reliable site to download a new game or discover your next favorite track?</p>
+                <p>We’ve been there, and that’s exactly why we built Grace. The internet is massive, and finding the best spots for high-quality entertainment can feel like finding a needle in a haystack.</p>
+                
+                <div class="bullet-grid">
+                    <div><strong>Movies & TV Shows:</strong> Mainstream streaming giants & indie gems.</div>
+                    <div><strong>Gaming:</strong> Where to find downloads, browser games, and communities.</div>
+                    <div><strong>Music & Audio:</strong> Top platforms for discovering underground artists.</div>
+                    <div><strong>Manhwa & Novels:</strong> Curated hubs for reading translations and webcomics.</div>
+                    <div><strong>And Beyond:</strong> Open source tech tools and digital resource hubs.</div>
+                </div>
+
+                <p class="mission-statement">Our Mission: To save you time, clear the clutter, and connect you directly with the content you love. We do the digging, testing, and reviewing so you can just click and enjoy.</p>
+            </div>
+        </section>
+
+        <section id="categories" class="categories-section">
+            <h2 class="editorial-header">What We Curate</h2>
+            
+            <div class="swipe-wrapper">
+                <div class="swipe-track">
+                    
+                    <div class="swipe-card active" id="flip-cinema">
+                        <div class="card-inner-box">
+                            <div class="card-face-front">
+                                <div class="card-visible-content">
+                                    <div class="card-header">
+                                        <span class="card-num">01</span>
+                                        <h3>CINEMA &<br>STREAMING</h3>
+                                    </div>
+                                    <ul class="card-specs">
+                                        <li>• Index Size: 140+ Platforms</li>
+                                        <li>• Update Rate: Daily Drops</li>
+                                        <li>• Filter Focus: Tracker / Aggregator</li>
+                                    </ul>
+                                </div>
+                                <a href="#flip-cinema" class="card-action-btn">Explore Category &rarr;</a>
+                            </div>
+                            <div class="card-face-back">
+                                <div class="back-header-row">
+                                    <span class="back-label">VERIFIED NODES</span>
+                                    <a href="#categories" class="back-close-btn">&times;</a>
+                                </div>
+                                <div class="back-link-directory">
+                                    <a href="https://net11.cc/home" target="_blank" class="directory-node">NetMirror &rarr;</a>
+                                    <a href="https://flixer.su/" target="_blank" class="directory-node">Flixer &rarr;</a>
+                                    <a href="https://hurawatch.cx/home" target="_blank" class="directory-node">HuraWatch &rarr;</a>
+                                    <a href="https://uhdmovies.rodeo/" target="_blank" class="directory-node">UHD Movies &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swipe-card" id="flip-gaming">
+                        <div class="card-inner-box">
+                            <div class="card-face-front">
+                                <div class="card-visible-content">
+                                    <div class="card-header">
+                                        <span class="card-num">02</span>
+                                        <h3>THE GAMING<br>HUB</h3>
+                                    </div>
+                                    <ul class="card-specs">
+                                        <li>• Index Size: 200+ Repositories</li>
+                                        <li>• Update Rate: Weekly Cleans</li>
+                                        <li>• Filter Focus: Mods / Indie / Emulation</li>
+                                    </ul>
+                                </div>
+                                <a href="#flip-gaming" class="card-action-btn">Explore Category &rarr;</a>
+                            </div>
+                            <div class="card-face-back">
+                                <div class="back-header-row">
+                                    <span class="back-label">VERIFIED NODES</span>
+                                    <a href="#categories" class="back-close-btn">&times;</a>
+                                </div>
+                                <div class="back-link-directory">
+                                    <a href="https://fitgirl-repacks.site/popular-repacks/" target="_blank" class="directory-node">Fitgirl Repacks &rarr;</a>
+                                    <a href="https://steamdb.info" target="_blank" class="directory-node">SteamDB Charts &rarr;</a>
+                                    <a href="https://online-fix.me/" target="_blank" class="directory-node">OnlineFix &rarr;</a>
+                                    <a href="https://www.ovagames.com/" target="_blank" class="directory-node">Ova Games &rarr;</a>
+                                    <a href="https://game3rb.com/" target="_blank" class="directory-node">Games3rb &rarr;</a>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swipe-card" id="flip-audio">
+                        <div class="card-inner-box">
+                            <div class="card-face-front">
+                                <div class="card-visible-content">
+                                    <div class="card-header">
+                                        <span class="card-num">03</span>
+                                        <h3>AUDIO &<br>SOUNDTRACKS</h3>
+                                    </div>
+                                    <ul class="card-specs">
+                                        <li>• Index Size: 90+ Nodes</li>
+                                        <li>• Audio Standard: High Fidelity / Lossless</li>
+                                        <li>• Filter Focus: Synthwave / Indie Label</li>
+                                    </ul>
+                                </div>
+                                <a href="#flip-audio" class="card-action-btn">Explore Category &rarr;</a>
+                            </div>
+                            <div class="card-face-back">
+                                <div class="back-header-row">
+                                    <span class="back-label">VERIFIED NODES</span>
+                                    <a href="#categories" class="back-close-btn">&times;</a>
+                                </div>
+                                <div class="back-link-directory">
+                                    <a href="https://freefy.app/" target="_blank" class="directory-node">Freefy - Stream Free &rarr;</a>
+                                    <a href="https://qobuz.squid.wtf/" target="_blank" class="directory-node">Qobuz Squid &rarr;</a>
+                                    <a href="https://amz.squid.wtf/" target="_blank" class="directory-node">Amazon Music &rarr;</a>
+                                    <a href="https://antra.hoshi.cfd/" target="_blank" class="directory-node">Antra : Limit &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swipe-card" id="flip-manhwa">
+                        <div class="card-inner-box">
+                            <div class="card-face-front">
+                                <div class="card-visible-content">
+                                    <div class="card-header">
+                                        <span class="card-num">04</span>
+                                        <h3>MANHWA &<br>NOVELS</h3>
+                                    </div>
+                                    <ul class="card-specs">
+                                        <li>• Index Size: 110+ Translation Hubs</li>
+                                        <li>• Update Rate: Hourly Chapters</li>
+                                        <li>• Filter Focus: Webcomics / Light Novels</li>
+                                    </ul>
+                                </div>
+                                <a href="#flip-manhwa" class="card-action-btn">Explore Category &rarr;</a>
+                            </div>
+                            <div class="card-face-back">
+                                <div class="back-header-row">
+                                    <span class="back-label">VERIFIED NODES</span>
+                                    <a href="#categories" class="back-close-btn">&times;</a>
+                                </div>
+                                <div class="back-link-directory">
+                                    <a href="https://asuracans.com" target="_blank" class="directory-node">Asura Scans &rarr;</a>
+                                    <a href="https://www.webnovel.com" target="_blank" class="directory-node">Webnovel Archive &rarr;</a>
+                                    <a href="https://www.novelupdates.com" target="_blank" class="directory-node">Novel Updates &rarr;</a>
+                                    <a href="https://mangadex.org" target="_blank" class="directory-node">MangaDex Hub &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swipe-card" id="flip-tech">
+                        <div class="card-inner-box">
+                            <div class="card-face-front">
+                                <div class="card-visible-content">
+                                    <div class="card-header">
+                                        <span class="card-num">05</span>
+                                        <h3>TECH &<br>BEYOND</h3>
+                                    </div>
+                                    <ul class="card-specs">
+                                        <li>• Index Size: 80+ Utilities</li>
+                                        <li>• Software State: FOSS / Privacy Verified</li>
+                                        <li>• Filter Focus: Productivity Devkits</li>
+                                    </ul>
+                                </div>
+                                <a href="#flip-tech" class="card-action-btn">Explore Category &rarr;</a>
+                            </div>
+                            <div class="card-face-back">
+                                <div class="back-header-row">
+                                    <span class="back-label">VERIFIED NODES</span>
+                                    <a href="#categories" class="back-close-btn">&times;</a>
+                                </div>
+                                <div class="back-link-directory">
+                                    <a href="https://github.com" target="_blank" class="directory-node">GitHub Matrix &rarr;</a>
+                                    <a href="https://alternativeto.net" target="_blank" class="directory-node">AlternativeTo FOSS &rarr;</a>
+                                    <a href="https://f-droid.org" target="_blank" class="directory-node">F-Droid Packages &rarr;</a>
+                                    <a href="https://openhub.net" target="_blank" class="directory-node">OpenHub Index &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-nav">
+                <button class="arrow-btn prev-btn">&larr;</button>
+                <div class="stat-mini-row">
+                    <span>9+ Years Active</span> / <span>12 Models Built</span> / <span>40k Geeks</span>
+                </div>
+                <button class="arrow-btn next-btn">&rarr;</button>
+            </div>
+        </section>
+
+        <section id="login" class="login-section">
+            <div class="login-box">
+                <span class="meta-label">MEMBER ACCESS</span>
+                <h2>SIGN IN</h2>
+                <form onsubmit="return false;">
+                    <input type="email" placeholder="EMAIL ADDRESS">
+                    <input type="password" placeholder="PASSWORD">
+                    <button class="submit-btn">ENTER SYSTEM</button>
+                </form>
+                <div class="create-account">
+                    Don't have an account? <a href="#home" target="_blank">Create One</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span class="footer-brand">GRACE <span>COMPASS</span></span>
+        <span class="copyright">© 2026 GRACE. ALL RIGHTS RESERVED.</span>
+    </footer>
+
+    <script>
+        const track = document.querySelector('.swipe-track');
+        const cards = document.querySelectorAll('.swipe-card');
+        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+        const bgLayer = document.getElementById('dynamic-bg');
+        const loginSection = document.getElementById('login');
+        const categoriesSection = document.getElementById('categories');
+        
+        let index = 0;
+        const bgNames = ['cinema', 'gaming', 'audio', 'manhwa', 'tech'];
+
+        function updateCarousel() {
+            cards.forEach((c, i) => {
+                c.classList.toggle('active', i === index);
+            });
+            const cardWidth = cards[0].offsetWidth + 24; 
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+            
+            if (window.scrollY >= categoriesSection.offsetTop - 300 && window.scrollY < loginSection.offsetTop - 300) {
+                bgLayer.setAttribute('data-bg', bgNames[index]);
+            }
+        }
+
+        function jumpToCategory(targetIndex) {
+            index = targetIndex;
+            updateCarousel();
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (index < cards.length - 1) { index++; updateCarousel(); }
+        });
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) { index--; updateCarousel(); }
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY;
+            const categoriesTop = categoriesSection.offsetTop - 300;
+            const loginTop = loginSection.offsetTop - 300;
+
+            if (scrollPos >= loginTop) {
+                bgLayer.setAttribute('data-bg', 'login');
+            } else if (scrollPos >= categoriesTop) {
+                bgLayer.setAttribute('data-bg', bgNames[index]);
+            } else {
+                bgLayer.setAttribute('data-bg', 'default');
+            }
+        });
+    </script>
+</body>
+</html>
