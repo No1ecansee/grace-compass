@@ -260,19 +260,19 @@
         </section>
 
         <section id="login" class="login-section">
-            <div class="login-box">
-                <span class="meta-label">MEMBER ACCESS</span>
-                <h2>SIGN IN</h2>
-                <form onsubmit="return false;">
-                    <input type="email" placeholder="EMAIL ADDRESS">
-                    <input type="password" placeholder="PASSWORD">
-                    <button class="submit-btn">ENTER SYSTEM</button>
-                </form>
-                <div class="create-account">
-                    Don't have an account? <a href="#home" target="_blank">Create One</a>
-                </div>
-            </div>
-        </section>
+    <div class="login-box">
+        <span class="meta-label">MEMBER ACCESS</span>
+        <h2>SIGN IN</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="EMAIL ADDRESS" required>
+            <input type="password" id="login-password" placeholder="PASSWORD" required>
+            <button type="submit" class="submit-btn">ENTER SYSTEM</button>
+        </form>
+        <div class="create-account">
+            Don't have an account? <a href="#home" target="_blank">Create One</a>
+        </div>
+    </div>
+</section>
 
         <script type="module" src="auth.js"></script>
         
