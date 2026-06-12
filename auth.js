@@ -149,3 +149,32 @@ if (loginForm) {
         }
     });
 }
+
+// ============================================================
+//   GRACE — FRONTEND CREATIVE INTERFACE: THEME CONTROLLER PANEL
+// ============================================================
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        // Intercept data state attribute on the master document root
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        let targetTheme = 'dark';
+
+        if (currentTheme !== 'light') {
+            targetTheme = 'light';
+        }
+
+        // Apply clean data-theme string parameter tags
+        document.documentElement.setAttribute('data-theme', targetTheme);
+        
+        // Lock the choice into the browser's persistent memory cache
+        localStorage.setItem('preferred-theme', targetTheme);
+    });
+}
+
+// Read persistence states upon initial execution requests
+const savedTheme = localStorage.getItem('preferred-theme');
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+}
