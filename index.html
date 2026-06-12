@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Months<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,13 +6,6 @@
     <title>Grace | Deep Web Compass</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css"/>
-
-    <link rel="preload" href="https://i.pinimg.com/originals/0f/f7/69/0ff769dea5fe0c24a3c93f87edf05f16.gif" as="image" type="image/gif">
-    <link rel="preload" href="https://i.pinimg.com/originals/c0/e7/4c/c0e74c1e2e69e6cd6218a014e824a30b.gif" as="image" type="image/gif">
-    <link rel="preload" href="https://i.pinimg.com/originals/50/e4/8c/50e48ccff4cd0586879ff59937ec71da.gif" as="image" type="image/gif">
-    <link rel="preload" href="https://i.pinimg.com/originals/35/54/0a/35540aa4c7d61f2b5e7cdfd803aa1339.gif" as="image" type="image/gif">
-    <link rel="preload" href="https://i.pinimg.com/originals/91/eb/05/91eb0579f74dfe17bac2ee46da0e8354.gif" as="image" type="image/gif">
-    <link rel="preload" href="https://i.pinimg.com/originals/47/a0/29/47a029b4bbd3cd011da6c35ccaacea13.gif" as="image" type="image/gif">
 </head>
   
 <body>
@@ -29,6 +22,13 @@
 
     <div id="dynamic-bg" class="abyss-bg" data-bg="default"></div>
 
+    <div class="theme-toggle-container">
+        <button id="theme-toggle-btn" aria-label="Toggle Interface Theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+        </button>
+    </div>
+  
     <nav>
         <a href="#home" class="logo">GRACE</a>
         <div class="nav-right">
@@ -148,7 +148,7 @@
                                     <a href="https://steamdb.info" target="_blank" class="directory-node">SteamDB Charts &rarr;</a>
                                     <a href="https://online-fix.me/" target="_blank" class="directory-node">OnlineFix &rarr;</a>
                                     <a href="https://www.ovagames.com/" target="_blank" class="directory-node">Ova Games &rarr;</a>
-                                    <a href="https://game3rb.com/" target="_blank" class="directory-node">Games3rb &rarr;</a>                                    
+                                    <a href="https://game3rb.com/" target="_blank" class="directory-node">Games3rb &rarr;</a>                            
                                 </div>
                             </div>
                         </div>
@@ -253,32 +253,28 @@
             <div class="carousel-nav">
                 <button class="arrow-btn prev-btn">&larr;</button>
                 <div class="stat-mini-row">
-                    <span>1+ Month Active</span> / <span>For Bros</span> / <span> By Bro</span>
+                    <span>1+ Months Active</span> / <span>Fast Surfing</span> / <span>For Bros</span>
                 </div>
                 <button class="arrow-btn next-btn">&rarr;</button>
             </div>
         </section>
 
- <section id="login" class="login-section">
-    <div class="login-box">
-        <span class="meta-label">MEMBER ACCESS</span>
-        
-        <h2 id="auth-title">SIGN IN</h2>
-        
-        <form id="login-form">
-            <input type="email" id="login-email" placeholder="EMAIL ADDRESS" required>
-            <input type="password" id="login-password" placeholder="PASSWORD" required>  
-            <input type="password" id="register-confirm-password" placeholder="CONFIRM PASSWORD" class="auth-register-only" style="display: none;">
-            <button type="submit" class="submit-btn" id="auth-submit-btn">ENTER SYSTEM</button>
-        </form>
-        <div class="create-account" id="auth-toggle-wrapper">
-            Don't have an account? <a href="#" id="go-to-register">Create One</a>
-        </div>
-    </div>
-</section>
+        <section id="login" class="login-section">
+            <div class="login-box">
+                <span class="meta-label">MEMBER ACCESS</span>
+                <h2 id="auth-title">SIGN IN</h2>
+                <form id="login-form">
+                    <input type="email" id="login-email" placeholder="EMAIL ADDRESS" required>
+                    <input type="password" id="login-password" placeholder="PASSWORD" required>
+                    <input type="password" id="register-confirm-password" placeholder="CONFIRM PASSWORD" class="auth-register-only" style="display: none;">
+                    <button type="submit" class="submit-btn" id="auth-submit-btn">ENTER SYSTEM</button>
+                </form>
+                <div class="create-account" id="auth-toggle-wrapper">
+                    Don't have an account? <a href="#" id="go-to-register">Create One</a>
+                </div>
+            </div>
+        </section>
 
-        <script type="module" src="auth.js"></script>
-        
     </main>
 
     <footer>
@@ -299,13 +295,14 @@
         const bgNames = ['cinema', 'gaming', 'audio', 'manhwa', 'tech'];
 
         function updateCarousel() {
+            if (!cards.length || !track) return;
             cards.forEach((c, i) => {
                 c.classList.toggle('active', i === index);
             });
             const cardWidth = cards[0].offsetWidth + 24; 
             track.style.transform = `translateX(-${index * cardWidth}px)`;
             
-            if (window.scrollY >= categoriesSection.offsetTop - 300 && window.scrollY < loginSection.offsetTop - 300) {
+            if (bgLayer && window.scrollY >= categoriesSection.offsetTop - 300 && window.scrollY < loginSection.offsetTop - 300) {
                 bgLayer.setAttribute('data-bg', bgNames[index]);
             }
         }
@@ -315,14 +312,19 @@
             updateCarousel();
         }
 
-        nextBtn.addEventListener('click', () => {
-            if (index < cards.length - 1) { index++; updateCarousel(); }
-        });
-        prevBtn.addEventListener('click', () => {
-            if (index > 0) { index--; updateCarousel(); }
-        });
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                if (index < cards.length - 1) { index++; updateCarousel(); }
+            });
+        }
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                if (index > 0) { index--; updateCarousel(); }
+            });
+        }
 
         window.addEventListener('scroll', () => {
+            if (!bgLayer || !loginSection || !categoriesSection) return;
             const scrollPos = window.scrollY;
             const categoriesTop = categoriesSection.offsetTop - 300;
             const loginTop = loginSection.offsetTop - 300;
@@ -336,5 +338,7 @@
             }
         });
     </script>
+    
+    <script type="module" src="auth.js"></script>
 </body>
 </html>
